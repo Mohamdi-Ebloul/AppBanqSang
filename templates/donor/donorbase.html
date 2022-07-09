@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONNEUR</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+<script type="text/javascript">
+    function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+    <style>
+
+.sidepanel {
+  height: 100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #c32d22; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #c32d22;
+  color: white;
+width: 100%;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #c32d22;
+}
+
+    </style>
+</head>
+<body>
+
+ <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a style="text-decoration:none;" href="/"><i class="fas fa-home"></i>Accueil</a>
+  <a style="text-decoration:none;" href="/donor/donate-blood"><i class="fas fa-hand-holding-medical"></i>Donner sang</a>
+  <a style="text-decoration:none;" href="/donor/donation-history"><i class="fas fa-history"></i>Historique dons</a>
+  <a style="text-decoration:none;" href="/donor/make-request"><i class="fas fa-user-plus"></i>Demande sang</a>
+  <a style="text-decoration:none;" href="/donor/request-history"><i class="fas fa-history"></i>Historique demandes</a>
+  <a class="nav-link" style="color: white;" href="/logout">déconnecter &nbsp; <i class="fa fa-power-off"></i></a>
+
+</div>
+
+<nav class="openbtn" onclick="openNav()" style="font-size: 250%;">&nbsp;&nbsp;&nbsp; &#9776;  <a style="color:white;" class="navbar-brand" href="/" ><i class="fa fa-heartbeat"></i>&nbsp;<font face = "Comic sans MS" size ="3">Système gestion banques sang</font></a>
+</nav>
+
+
+<div class="wrapper">
+   
+    <div class="main_content">
+
+
+{% block content %}
+
+{% endblock content %}
+
+
+
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
